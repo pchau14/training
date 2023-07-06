@@ -1,0 +1,1 @@
+/var/www/html/training/lib/web/js-storage/js.storage.js

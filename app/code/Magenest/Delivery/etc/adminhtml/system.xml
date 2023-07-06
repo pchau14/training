@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="magenest" translate="label" sortOrder="10">
+            <label>Magenest</label>
+        </tab>
+        <section id="delivery" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Delivery Time</label>
+            <tab>magenest</tab>
+            <resource>Magenest_Delivery::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="not_deli_day" translate="label" type="multiselect" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Not Delivery Day(s)</label>
+                    <source_model>Magento\Config\Model\Config\Source\Locale\Weekdays</source_model>
+                </field>
+
+                <field id="lead_time" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lead Time</label>
+                </field>
+
+                <field id="max_deli_time" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lead Time</label>
+                </field>
+
+                <field id="admin_note" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Notice by Admin</label>
+                </field>
+
+                <field id="date_format" translate="label" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Date Format</label>
+                </field>
+
+                <field id="same_day_deli_status" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled `Disable Same Day Delivery After`</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+
+                <field id="same_day_deli" translate="label" type="time" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Disable Same Day Delivery After</label>
+                    <comment>Hour : Minute : Second</comment>
+                </field>
+
+                <field id="display_on" translate="label" type="multiselect" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Display On</label>
+                    <source_model>Magenest\Delivery\Model\Config\Source\Pages</source_model>
+                </field>
+
+                <field id="comment" translate="label" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Comments Field</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

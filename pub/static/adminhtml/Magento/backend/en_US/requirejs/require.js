@@ -1,0 +1,1 @@
+/var/www/html/training/lib/web/requirejs/require.js

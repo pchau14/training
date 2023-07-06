@@ -1,0 +1,1 @@
+/var/www/html/training/lib/web/knockoutjs/knockout-es5.js
